@@ -1,0 +1,22 @@
+@startuml
+skin rose
+title Diagramme de classes pour le package "ex1"
+package "ex1" {
+    class TextFileLineNumberer {
+      - fileName : String
+      - maxLineLength : int
+      + TextFileLineNumberer(fileName : String, maxLineLength : int)
+      + TextFileLineNumberer(fileName : String)
+      + numberLines() : String throws IOException
+    }
+
+    class TextFileLineNumbererTest {
+      - tempDir : java.nio.file.Path <<TempDir>>
+      + testNumberLinesSimple() : void
+      + testNumberLinesSplitLongLine() : void
+    }
+}
+
+TextFileLineNumberer <-- TextFileLineNumbererTest: tests
+
+@enduml

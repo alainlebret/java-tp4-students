@@ -1,0 +1,20 @@
+@startuml
+title Diagramme de classes pour le package "ex2"
+skin rose
+
+package "ex2" {
+    class ButterflyCreator {
+      - size : int
+      + ButterflyCreator(size : int)
+      + generate() : String
+    }
+
+    class ButterflyCreatorTest {
+      + testGenerateButterfly() : void
+      + testInvalidSize() : void
+    }
+}
+
+ButterflyCreator <-- ButterflyCreatorTest: "tests"
+
+@enduml

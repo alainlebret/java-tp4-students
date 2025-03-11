@@ -1,0 +1,26 @@
+@startuml
+
+skin rose
+title Diagramme de classes pour le package "ex4"
+
+package "ex4" {
+    class DirectoryBrowser {
+      - directory : File
+      - fileCount : int
+      - fileList : StringBuffer
+      + DirectoryBrowser(directory : File)
+      + browse() : void
+      + getFileCount() : int
+      + getFileList() : String
+      - recursivelyBrowse(dir : File, indent : int) : int
+    }
+
+    class DirectoryBrowserTest {
+      - tempDir : java.nio.file.Path <<TempDir>>
+      + testBrowseDirectory() : void
+    }
+}
+
+DirectoryBrowser <-- DirectoryBrowserTest : tests
+
+@enduml

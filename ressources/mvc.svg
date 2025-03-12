@@ -23,12 +23,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.45912907"
-     inkscape:cx="638.16478"
-     inkscape:cy="9.8011656"
+     inkscape:zoom="1"
+     inkscape:cx="385"
+     inkscape:cy="184.5"
      inkscape:window-width="1472"
      inkscape:window-height="630"
-     inkscape:window-x="409"
+     inkscape:window-x="40"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
@@ -39,78 +39,66 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(19.29975,-49.461977)">
-    <g
-       id="g10"
-       transform="translate(7.449093,-21.155424)">
-      <rect
-         style="fill:#afc0c9;stroke-width:0.255752;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.02301, 1.02301"
-         id="rect1"
-         width="51.249756"
-         height="24.433025"
-         x="90.878929"
-         y="70.617401"
-         rx="5"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
-         x="116.23711"
-         y="86.626984"
-         id="text1"><tspan
-           sodipodi:role="line"
-           id="tspan1"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
-           x="116.23711"
-           y="86.626984">Contrôleur</tspan></text>
-    </g>
-    <g
-       id="g11"
-       transform="translate(0.57627223,-22.474617)">
-      <rect
-         style="fill:#afc0c9;stroke-width:0.255752;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.02301, 1.02301"
-         id="rect2"
-         width="51.249756"
-         height="24.433025"
-         x="29.200439"
-         y="117.99363"
-         rx="5"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
-         x="55.037685"
-         y="133.53896"
-         id="text3"><tspan
-           sodipodi:role="line"
-           id="tspan3"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
-           x="55.037685"
-           y="133.53896">Vue</tspan></text>
-    </g>
-    <g
-       id="g12"
-       transform="translate(6.3389946,-22.474617)">
-      <rect
-         style="fill:#afc0c9;stroke-width:0.255752;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.02301, 1.02301"
-         id="rect3"
-         width="51.249756"
-         height="24.433025"
-         x="157.32484"
-         y="118.88752"
-         rx="5"
-         ry="5" />
-      <text
-         xml:space="preserve"
-         style="font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
-         x="182.90033"
-         y="134.91191"
-         id="text4"><tspan
-           sodipodi:role="line"
-           id="tspan4"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:9.87778px;line-height:24.1841px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
-           x="182.90033"
-           y="134.91191">Modèle</tspan></text>
-    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1"
+       width="51.249756"
+       height="24.433025"
+       x="98.328026"
+       y="49.461979"
+       rx="5"
+       ry="5" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:20.7293px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
+       x="124.21537"
+       y="64.94239"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.46667px;line-height:20.7293px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
+         x="124.21537"
+         y="64.94239">Contrôleur</tspan></text>
+    <rect
+       style="fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0"
+       id="rect2"
+       width="51.249756"
+       height="24.433025"
+       x="29.776712"
+       y="95.519012"
+       rx="5"
+       ry="5" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:20.7292px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
+       x="55.613956"
+       y="110.79976"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.46667px;line-height:20.7292px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
+         x="55.613956"
+         y="110.79976">Vue</tspan></text>
+    <rect
+       style="fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0"
+       id="rect3"
+       width="51.249756"
+       height="24.433025"
+       x="163.66383"
+       y="96.412903"
+       rx="5"
+       ry="5" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:20.7292px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
+       x="189.23932"
+       y="112.17271"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.46667px;line-height:20.7292px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Light';fill:#000000;fill-opacity:1;stroke-width:0.242"
+         x="189.23932"
+         y="112.17271">Modèle</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:15.5469px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.242;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.967999, 0.967999"
@@ -169,7 +157,7 @@
     <path
        id="XMLID_6_"
        d="m 79.063741,56.211184 c -0.82117,0.276105 -1.262962,1.165671 -0.98681,1.986981 l 1.65658,4.925716 c -5.872595,-2.23099 -12.767849,-0.484915 -16.797506,4.73623 -2.965996,3.843104 -3.833236,8.895165 -2.319574,13.514024 0.269891,0.82334 1.156015,1.272064 1.979305,1.00227 0.82334,-0.26989 1.272063,-1.156015 1.002125,-1.979261 -1.189681,-3.630282 -0.508529,-7.600157 1.82191,-10.619917 3.183613,-4.124929 8.643824,-5.489319 13.274362,-3.691502 l -5.444175,1.831033 c -0.821077,0.276151 -1.263011,1.165765 -0.986718,1.987028 0.2762,0.821217 1.165765,1.263009 1.986983,0.986811 l 8.759605,-2.946106 c 0.41061,-0.138098 0.726327,-0.429587 0.904868,-0.789084 0.17854,-0.3595 0.220042,-0.78729 0.08194,-1.197898 L 81.050722,57.198231 C 80.774615,56.376826 79.884956,55.934988 79.063711,56.21124 Z"
-       style="stroke-width:0.104584" />
+       style="stroke-width:0;stroke-dasharray:none" />
     <path
        id="path12"
        d="m 77.205911,94.006271 c 0.81679,-0.288805 1.244734,-1.185115 0.95588,-2.002044 L 76.42903,87.104791 c 5.906483,2.139658 12.773833,0.286872 16.722044,-4.996131 2.906046,-3.888634 3.694842,-8.953536 2.10974,-13.548368 -0.282626,-0.819056 -1.175602,-1.253985 -1.994609,-0.971457 -0.819056,0.282624 -1.253985,1.175601 -0.971313,1.994562 1.245831,3.611398 0.626319,7.591358 -1.657014,10.646892 -3.119267,4.173799 -8.557664,5.622694 -13.215523,3.896897 l 5.415127,-1.915233 c 0.816696,-0.28885 1.244783,-1.18521 0.955788,-2.00209 -0.288901,-0.816835 -1.18521,-1.24478 -2.002046,-0.955881 l -8.712868,3.081583 c -0.40842,0.144448 -0.719579,0.440798 -0.892524,0.80302 -0.172944,0.362225 -0.207807,0.790607 -0.06336,1.199025 l 3.081386,8.712544 c 0.288811,0.817024 1.185214,1.245014 2.002077,0.95606 z"

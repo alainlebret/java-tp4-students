@@ -123,6 +123,8 @@ MVC pour "modèle-vue-contrôleur" est un patron de conception qui sépare une a
 - La **vue** s'occupe de l'affichage et de l'interface utilisateur.
 - Le **contrôleur** traite les entrées utilisateur et fait le lien entre modèle et vue.
 
+![Modèle MVC](ressources/mvc.svg)
+
 ### Application à l'exercice
 
 Le diagramme de classes pour l'exercice n°3 est le suivant :

@@ -1,0 +1,66 @@
+@startuml
+title Architecture MVC pour la gestion des étudiants
+
+skin rose
+
+package "ex3" {
+package "Modèle" {
+    class Student {
+      - code : int
+      - lastName : String
+      - firstName : String
+      - meanScore : double
+      + Student(lastName : String, firstName : String, meanScore : double)
+      + getCode() : int
+      + getLastName() : String
+      + getFirstName() : String
+      + getMeanScore() : double
+      + setLastName(lastName : String) : void
+      + setFirstName(firstName : String) : void
+      + setMeanScore(meanScore : double) : void
+      + toString() : String
+    }
+    class StudentManager {
+      - students : ArrayList<Student>
+      + StudentManager()
+      + addStudent(student : Student) : boolean
+      + updateStudent(student : Student) : boolean
+      + deleteStudent(code : int) : boolean
+      + searchStudentByCode(code : int) : Student
+      + searchStudentsByLastName(lastName : String) : List<Student>
+      + generateReport() : String
+      + saveStudents() : void
+      + loadStudents() : void
+      + saveSpecificStudents(filename : String, condition : Predicate<Student>) : void
+    }
+}
+
+package "Vue" {
+    class StudentView {
+      + StudentView()
+      + displayMenu() : void
+      + promptForInt(message : String) : int
+      + promptForDouble(message : String) : double
+      + promptForString(message : String) : String
+      + displayMessage(message : String) : void
+      + displayStudent(student : Student) : void
+      + displayStudents(students : List<Student>) : void
+    }
+}
+
+package "Contrôleur" {
+    class StudentController {
+      - manager : StudentManager
+      - view : StudentView
+      + StudentController()
+      + run() : void
+    }
+}
+}
+
+StudentController --> StudentManager : "utilise"
+StudentController --> StudentView : "met à jour"
+StudentManager --> Student : "gère"
+StudentView --> Student : "affiche"
+
+@enduml

@@ -131,7 +131,7 @@ Le diagramme de classes pour l'exercice n°3 est le suivant :
 
 ![Diagramme de classes de l'exercice n°3](ressources/diag-classes-ex3.svg)
 
-Pour ceux qui débutent en programmation orientée objet, contentez-vous d'implémenter les classes `Student` et `StudentManager` que vous mettrez en oeuvre directement depuis une classe `Main`.
+Pour ceux qui débutent en programmation orientée objet, contentez-vous d'implémenter les classes du modèle (`Student` et `StudentManager`) que vous mettrez en oeuvre directement depuis une classe `Main`.
 
 #### Classes du "modèle"
 

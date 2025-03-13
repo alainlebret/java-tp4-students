@@ -49,7 +49,7 @@ public class StudentManagerTest {
 
     @Test
     public void testDeleteStudent() {
-        Student s1 = new Student("Saigne", "Jeanne", 10.0);
+        Student s1 = new Student("Saigner", "Jeanne", 10.0);
         manager.addStudent(s1);
         boolean deleted = manager.deleteStudent(s1.getCode());
         assertTrue(deleted, "Student should be deleted.");
@@ -62,7 +62,7 @@ public class StudentManagerTest {
     @Test
     public void testGenerateReport() {
         manager.addStudent(new Student("Saigne", "Jean", 16.0)); // Best
-        manager.addStudent(new Student("SBave", "Jean", 8.5));  // Worst
+        manager.addStudent(new Student("Bave", "Jean", 8.5));  // Worst
         manager.addStudent(new Student("Ceptes", "Jacques", 12.0));   // Average
         String report = manager.generateReport();
         assertNotNull(report, "Report should not be null.");

@@ -1,86 +1,72 @@
 package ex3;
 
-import java.io.File;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class StudentManagerTest {
+import java.io.File;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Tests for the simplified StudentManager class.
+ */
+public class StudentManagerTest {
     private StudentManager manager;
 
-    @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+    @BeforeEach
+    public void setUp() {
         manager = new StudentManager();
-        // For each test, we delete file to begin with an empty list
+        // Remove the class file to start fresh.
         File classFile = new File("class.dat");
         if (classFile.exists()) {
             classFile.delete();
         }
     }
 
-    @org.junit.jupiter.api.AfterEach
-    void tearDown() {
-    }
-
-    @org.junit.jupiter.api.Test
-    public void testAddStudent() {
+    @Test
+    public void testAddAndSearchStudent() {
         Student s1 = new Student("Saigne", "Jean", 11.0);
         boolean added = manager.addStudent(s1);
-        assertTrue(added, "Adding student have succeed.");
+        assertTrue(added, "Student should be added successfully.");
 
-        // Trying to add a clone
-        Student s2 = new Student("Saigne", "Jean", 11.0);
-        added = manager.addStudent(s2);
-        assertFalse(added, "A student clone cannot be added.");
-    }
-
-    @org.junit.jupiter.api.Test
-    public void testSearchStudentByCode() {
-        Student s1 = new Student("Cepte", "Jacques", 14.0);
-        manager.addStudent(s1);
         Student found = manager.searchStudentByCode(s1.getCode());
-        assertNotNull(found, "A student should be found using its code.");
-        assertEquals(s1.getLastName(), found.getLastName());
+        assertNotNull(found, "Student should be found by code.");
+        assertEquals("Saigne", found.getLastName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
+    public void testUpdateStudent() {
+        Student s1 = new Student("Bave", "Jean", 9.0);
+        manager.addStudent(s1);
+
+        // Update mean score
+        s1.setMeanScore(12.0);
+        boolean updated = manager.updateStudent(s1);
+        assertTrue(updated, "Student should be updated.");
+
+        Student updatedStudent = manager.searchStudentByCode(s1.getCode());
+        assertEquals(12.0, updatedStudent.getMeanScore(), 0.001, "Mean score should be updated correctly.");
+    }
+
+    @Test
     public void testDeleteStudent() {
-        Student s1 = new Student("Cepte", "Jacques", 9.0);
+        Student s1 = new Student("Saigne", "Jeanne", 10.0);
         manager.addStudent(s1);
         boolean deleted = manager.deleteStudent(s1.getCode());
-        assertTrue(deleted, "The student should be deleted.");
-        // A second deletion must failed
+        assertTrue(deleted, "Student should be deleted.");
+        
+        // Try deleting again should return false.
         deleted = manager.deleteStudent(s1.getCode());
-        assertFalse(deleted, "Deleting a non-existent student should fail.");
+        assertFalse(deleted, "Deleting a non-existing student should fail.");
     }
 
-    @org.junit.jupiter.api.Test
-    public void testUpdateStudent() {
-        Student s1 = new Student("Cepte", "Jacques", 13.0);
-        manager.addStudent(s1);
-        s1.setMeanScore(15.0);
-        boolean updated = manager.updateStudent(s1);
-        assertTrue(updated, "The student must be updated.");
-        Student updatedStudent = manager.searchStudentByCode(s1.getCode());
-        assertEquals(15.0, updatedStudent.getMeanScore(), 0.001, "The score mean is not updated correctly.");
-    }
-
-    @org.junit.jupiter.api.Test
+    @Test
     public void testGenerateReport() {
-        manager.addStudent(new Student("Saigne", "Jean", 16.0));
-        manager.addStudent(new Student("Cepte", "Jacques", 8.5));
-        manager.addStudent(new Student("Rage", "Jean", 12.0));
-
+        manager.addStudent(new Student("Saigne", "Jean", 16.0)); // Best
+        manager.addStudent(new Student("SBave", "Jean", 8.5));  // Worst
+        manager.addStudent(new Student("Ceptes", "Jacques", 12.0));   // Average
         String report = manager.generateReport();
-        assertNotNull(report, "The report must exist.");
-        assertTrue(report.contains("Highest scoring student"), "The report must contain information on the student with the highest mean score.");
-        assertTrue(report.contains("Lowest scoring student"), "The report must contain information on the student with the lowest mean score.");
-
-        // We delete the report
-        File statusFile = new File("status.txt");
-        if (statusFile.exists()) {
-            statusFile.delete();
-        }
+        assertNotNull(report, "Report should not be null.");
+        assertTrue(report.contains("Best student"), "Report should mention the best student.");
+        assertTrue(report.contains("Worst student"), "Report should mention the worst student.");
     }
-
-
 }

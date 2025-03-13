@@ -131,6 +131,8 @@ Le diagramme de classes pour l'exercice n°3 est le suivant :
 
 ![Diagramme de classes de l'exercice n°3](ressources/diag-classes-ex3.svg)
 
+Pour ceux qui débutent en programmation orientée objet, contentez-vous d'implémenter les classes `Student` et `StudentManager` que vous mettrez en oeuvre directement depuis une classe `Main`.
+
 #### Classes du "modèle"
 
 Le modèle est indépendant de toute logique d’affichage et "isole" la logique métier.
@@ -143,19 +145,16 @@ La classe `Student` représente un étudiant avec des attributs tels que son cod
 - Les mutateurs (*setters*) avec les méthodes `setLastName(String)` et `setFirstName(String)` permettent de modifier le nom et le prénom de l'étudiant (le code unique est recalculé pour garantir l'unicité). La méthode `setMeanScore(double)` permet de mettre à jour la moyenne de l'étudiant.
 - La méthode `toString()` renvoie une représentation textuelle de l'étudiant.
 
-La classe `StudentManager` gère la liste des étudiants (ajout, modification, suppression, recherche, génération de rapport). Elle est munie des méthodes suivantes :
+La classe `StudentManager` est conçue pour gérer une liste d'étudiants. Elle dispose des méthodes suivantes :
 
-- Le constructeur `StudentManager()` initialise la liste des étudiants avec une `ArrayList`.
-- `loadStudents()` tente de charger la liste des étudiants à partir d'un fichier binaire nommé "class.dat". Si le fichier existe, elle désérialise son contenu et l'affecte à la liste des étudiants. En cas d'erreur (fichier introuvable ou problème de lecture), un message d'erreur est affiché.
-- `saveStudents()` enregistre la liste actuelle des étudiants dans le fichier "class.dat" en sérialisant l'objet. Cette méthode est appelée après chaque modification (ajout, mise à jour ou suppression) pour assurer la persistance des données.
-- `addStudent(Student student)` ajoute un étudiant à la liste si aucun étudiant existant ne possède le même code. Si l'ajout est réussi, la méthode sauvegarde la liste mise à jour et retourne `true` ; sinon, elle retourne `false`.
-- `updateStudent(Student updatedStudent)` recherche un étudiant existant dont le code correspond à celui passé en paramètre. Si trouvé, l'étudiant est mis à jour dans la liste, la liste est sauvegardée, et la méthode retourne `true`.
-- `deleteStudent(int code)` supprime un étudiant dont le code correspond à celui fourni. La liste est ensuite sauvegardée si la suppression est effectuée, et la méthode retourne `true`.
-- `searchStudentByCode(int code)` parcourt la liste des étudiants et retourne l'étudiant dont le code correspond au paramètre, ou `null` si aucun étudiant n'est trouvé.
-- `searchStudentsByLastName(String lastName)` effectue une recherche pour retrouver tous les étudiants dont le nom correspond au paramètre et retourne une liste de résultats.
-- `generateReport()` génère un rapport sur la classe qui inclut : l'étudiant ayant la meilleure moyenne, celui ayant la plus faible et la moyenne générale de la classe. De plus, si la classe contient plus de 7 étudiants, elle sauvegarde les étudiants ayant réussi (moyenne >= 10) dans un fichier spécifique ("success.dat") et ceux en zone de rachat (moyenne entre 9 et 9.99) dans un autre fichier ("catch_up.dat"). Le rapport est ensuite sauvegardé dans "status.txt" et retourné sous forme de chaîne de caractères.
-- `saveSpecificStudents(String filename, Predicate condition)` filtre la liste des étudiants en fonction d'une condition (représentée éventuellement par un `Predicate`) et enregistre le sous-ensemble résultant dans le fichier spécifié.
-- `getStudents()` retourne une copie de la liste des étudiants.
+- La méthode `loadStudents()` tente de charger la liste des étudiants à partir d'un fichier binaire ("class.dat"). Si le fichier existe, elle désérialise le contenu pour recréer la liste. 
+- La méthode `saveStudents()` enregistre la liste actuelle dans ce même fichier, garantissant ainsi que les modifications apportées à la liste des étudiants sont conservées entre les exécutions.
+- La méthode `addStudent(Student student)` permet d'ajouter un nouvel étudiant à la liste. Avant l'ajout, elle vérifie qu'aucun étudiant existant ne possède déjà le même code (qui est généré automatiquement à partir du nom et du prénom). Si l'étudiant est ajouté avec succès, la liste est sauvegardée.
+- La méthode `updateStudent(Student updatedStudent)` recherche dans la liste un étudiant dont le code correspond à celui de l'étudiant mis à jour. Si l'étudiant est trouvé, ses informations sont remplacées par celles du nouvel objet, puis la liste est sauvegardée.
+- La méthode `deleteStudent(int code)` supprime de la liste l'étudiant dont le code correspond à la valeur fournie. Si la suppression est effectuée, la liste est mise à jour et sauvegardée.
+- `searchStudentByCode(int code)` parcourt la liste et retourne l'étudiant qui correspond au code recherché, ou `null` si aucun étudiant n'est trouvé.
+- `searchStudentsByLastName(String lastName)` permet de rechercher tous les étudiants dont le nom de famille correspond (sans tenir compte de la casse) et retourne une liste de résultats.
+- La méthode `generateReport()` analyse la liste des étudiants pour déterminer : l'étudiant ayant la meilleure moyenne, celui ayant la moins bonne et la moyenne générale de la classe. Elle construit ensuite une chaîne de caractères qui contient ces informations sous forme de rapport, facilitant ainsi une vue d'ensemble de l'état de la classe.
 
 #### Classe de la "vue"
 

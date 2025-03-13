@@ -23,15 +23,15 @@ package "Modèle" {
     class StudentManager {
       - students : ArrayList<Student>
       + StudentManager()
+      + loadStudents() : void
+      + saveStudents() : void
       + addStudent(student : Student) : boolean
       + updateStudent(student : Student) : boolean
       + deleteStudent(code : int) : boolean
       + searchStudentByCode(code : int) : Student
       + searchStudentsByLastName(lastName : String) : List<Student>
       + generateReport() : String
-      + saveStudents() : void
-      + loadStudents() : void
-      + saveSpecificStudents(filename : String, condition : Predicate<Student>) : void
+      + getStudents() : ArrayList<Student>
     }
 }
 

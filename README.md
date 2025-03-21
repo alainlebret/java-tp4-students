@@ -106,7 +106,7 @@ Le diagramme de classes pour l'exercice n°2 est le suivant :
 
 La classe `ButterflyCreator` permet de générer un motif en forme de papillon à l'aide d'une chaîne de caractères.
 
-- Le constructeur `ButterflyCreator(int size)` initialise un objet `ButterflyCreator` avec une taille donnée. Le paramètre `size` doit être un entier positif pair. Si la taille est négative, nulle ou impaire, le constructeur lève une exception `IllegalArgumentException`.
+- Le constructeur `ButterflyCreator(int size)` initialise un objet `ButterflyCreator` avec une taille donnée. Le paramètre `size` doit être un entier positif impair. Si la taille est négative, nulle ou paire, le constructeur lève une exception `IllegalArgumentException`.
 - La méthode `generate()` génère le motif du papillon et retourne le résultat sous forme de chaîne de caractères. Chaque ligne est assemblée en utilisant un `StringBuilder`, et le motif complet est retourné à la fin de la méthode.
 
 La classe de test [`ButterflyCreatorTest.java`](src/ex2/ButterflyCreatorTest.java) qui vous est fournie permet de vérifier la génération d'un papillon de taille 7, ainsi que la gestion d'une taille incorrecte.
